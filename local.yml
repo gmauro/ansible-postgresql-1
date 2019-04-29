@@ -9,5 +9,9 @@
   vars:
     postgresql_version: 11
     postgresql_flavor: "pgdg"
+    postgresql_conf:
+      listen_addresses: "'*'"
+      hba_file: "'/etc/postgresql/11/main/pg_hba.conf'"
+      ident_file: "'/etc/postgresql/11/main/pg_ident.conf'"
   roles:
     - '.' # The current directory itself is the role
