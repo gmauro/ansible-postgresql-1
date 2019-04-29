@@ -6,6 +6,8 @@
 #   ansible-playbook -i localhost, local.yml [-e var=val]* --tags=<tag[,tag]> --skip-tags=<tag[,tag]>
 - hosts: localhost
   connection: local
-
+  vars:
+    postgresql_version: 11
+    postgresql_flavor: "pgdg"
   roles:
     - '.' # The current directory itself is the role
